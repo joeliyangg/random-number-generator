@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Number Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="initiator-view" class="view">
+      <h1>Set Random Number Range</h1>
+      <label>
+        <span>Enter Minimum Value</span>
+        <input type="number" id="min-value" placeholder="Min value" />
+      </label>
+      <label>
+        <span>Enter Maximum Value</span>
+        <input type="number" id="max-value" placeholder="Max value" />
+      </label>
+      <button id="save-settings">Save Settings</button>
+      <div id="link-container" class="hidden">
+        <p>Shareable Link:</p>
+        <input type="text" id="share-link" readonly />
+        <button id="copy-link">Copy Link</button>
+        <span id="copy-msg" class="copy-msg hidden">Copied!</span>
+      </div>
+    </div>
+
+    <div id="receiver-view" class="view hidden">
+      <h1>Generate Random Number</h1>
+      <p id="range-info"></p>
+      <button id="generate-btn">Generate</button>
+      <p id="result" class="result"></p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="tips">
+      <h2>Advanced Play Tips 进阶玩法提示</h2>
+      <ul>
+        <li>1. Numeric Fate: sum the numbers; odd picks A, even picks B. <br/>数字决定命运：将随机数相加，奇数选A，偶数选B</li>
+        <li>2. Advanced Play: if sum > 10 pick A, otherwise pick B. <br/>进阶玩法：数字相加＞10选A，反之选B</li>
+        <li>3. Fun Upgrade: if the product’s last digit is odd pick A, even picks B. <br/>趣味升级：乘积个位奇数选A，偶数选B</li>
+        <li>4. Ultimate: take sum mod 3; if remainder 0 or 1 pick A, otherwise pick B. <br/>一决胜负：总和除以3，余数0/1选A，其他选B</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
